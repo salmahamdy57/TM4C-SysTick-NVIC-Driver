@@ -29,8 +29,8 @@ All APIs adhere to **CMSIS naming conventions**, are **reentrant-safe**, and cle
   ```c
   void SysTick_Init(uint16 ms);
   void SysTick_StartBusyWait(uint16 ms);
-  void SysTick_Handler(void);            // ISR
-  void SysTick_SetCallBack(void (*cb)(void)); // Register ISR callback
+  void SysTick_Handler(void);                  // ISR
+  void SysTick_SetCallBack(void (*cb)(void));  // Register ISR callback
   void SysTick_Start(void);
   void SysTick_Stop(void);
   void SysTick_DeInit(void);
