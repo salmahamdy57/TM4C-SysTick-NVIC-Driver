@@ -1,9 +1,9 @@
-# TM4C-SysTick-NVIC-Driver-Project
+# TM4C-SysTick-NVIC-Driver
 
-## Overview 📖
+### ProjectOverview 📖
 Develop low-level drivers for the **SysTick** timer and **Nested Vectored Interrupt Controller (NVIC)** on TI TM4C microcontrollers (16 MHz). Leverage **CMSIS-style APIs** for portability across ARM Cortex‑M platforms, ensuring modular, maintainable code and accurate millisecond-resolution timing.
 
-## Objectives 🎯
+### Objectives 🎯
 1. **SysTick Timer Driver**
    - Initialize SysTick for millisecond-precision interrupts (≤ 1 ms resolution)
    - Start/stop timer in **interrupt** and **busy-wait** modes with low overhead
@@ -16,13 +16,13 @@ Develop low-level drivers for the **SysTick** timer and **Nested Vectored Interr
    - Manage ARM system/fault exceptions (e.g., SysTick, BusFault) to improve system robustness
    - Configure exception priority (`NVIC_EnableException`, `NVIC_DisableException`, `NVIC_SetPriorityException`)
 
-## Features 💡
+### Features 💡
 - **Periodic Callbacks**: Register custom callbacks for SysTick events to toggle LEDs or trigger tasks
 - **Blocking & Non-Blocking Delays**: Choose between busy-wait and interrupt-driven delay methods
 - **Dynamic IRQ Control**: Enable, disable, and reprioritize interrupts at runtime for flexible event handling
 - **Fault Management**: Enable and prioritize system exceptions to handle hard faults and memory errors gracefully
 
-## Drivers & API 📚
+### Drivers & API 📚
 All APIs adhere to **CMSIS naming conventions**, are **reentrant-safe**, and clearly distinguish main-context versus ISR-safe functions.
 
 - **SysTick Driver**:
